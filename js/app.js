@@ -1,15 +1,10 @@
 $(function(){
 
-	$("#submit-btn").click(checkSubmit);
-
-	function checkSubmit(){
+	$("#submit-btn").click(function(event){
+	
 		var city = $("#city-type").val();
-		handleSubmit(city);
-	}
 
-	function handleSubmit(city) {
 		//if(!city.trim())
-
 		event.preventDefault();
 
 		if(city === "NYC" || city === "New York City" || city === "New York"){
@@ -34,6 +29,6 @@ $(function(){
 
 		else
 			alert("Must enter a valid city!");
-	}
+	});
 
 });
